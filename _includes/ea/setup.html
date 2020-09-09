@@ -1,28 +1,27 @@
-{% assign curricula = "swc-gapminder|swc-inflammation"  | split: "|" %}
-{% unless curricula contains site.curriculum %}
-{% include warning-curriculum.html %}
-{% endunless %}
-
-{% include install_instructions/shell.html %}
-{% include install_instructions/git.html %}
-{% include install_instructions/editor.html %}
-
-{% if site.flavor == "r" %}
-{% include install_instructions/r.html %}
-{% elsif site.flavor == "python" %}
 {% include install_instructions/python.html %}
-{% elsif site.flavor == "FIXME" %}
-{% include install_instructions/r.html %}
-{% include install_instructions/python.html %}
-{% else %}
-{% include warning-flavor.html %}
-{% endif %}
-
-{% comment %}
-The following setup instructions are commented out because Carpentries workshops
-cover the these topics less frequently. Please uncomment the lines that
-correspond to the topics covered in your workshop.
-
-{% include install_instructions/sql.html %}
 {% include install_instructions/openrefine.html %}
-{% endcomment %}
+{% include install_instructions/spreadsheet.html %}
+
+<div id="data">
+    <h3>Data</h3>
+    <h4>Gapminder Dataset</h4>
+    <p>
+        The data we will be using is taken from the <a href="https://en.wikipedia.org/wiki/Gapminder_Foundation">gapminder</a> dataset.
+        To obtain it, download and unzip the file
+        <a href="http://swcarpentry.github.io/python-novice-gapminder/files/python-novice-gapminder-data.zip">python-novice-gapminder-data.zip</a>.
+    </p>
+
+    <h4>Portal Project Teaching Database</h4>
+    <p>
+        The data for this workshop are is the <a href ="https://figshare.com/articles/Portal_Project_Teaching_Database/1314459">Portal Project Teaching Database</a> available on FigShare, with a CC-BY license available for reuse.
+    </p>
+    <p>
+        The Portal Project Teaching Database is a simplified version of the Portal Project Database designed for teaching.
+        It is a tabular dataset of observations of small mammals in a desert ecosystem in Arizona, USA, collected over more than 40 years.
+        It provides a real world example of life-history, population, and ecological data, with sufficient complexity to teach many aspects
+        of data analysis and management, but with many complexities removed to allow students to focus on the core ideas and skills being taught.
+    </p>
+    <p>       
+        <a href="https://datacarpentry.org/ecology-workshop/data">More information on this dataset</a>
+    </p>
+  </div>
